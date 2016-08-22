@@ -43,12 +43,14 @@ You pass options to cmake as follows: ```cmake -DOPTION=VALUE```
 
 ## Running the examples
 
+	// specify acceptors and proposers separately
 	cd libpaxos/build
-	./sample/acceptor 0 ../paxos.conf > /dev/null &
-	./sample/acceptor 1 ../paxos.conf > /dev/null &
-	./sample/proposer 0 ../paxos.conf > /dev/null &
+	./sample/acceptor 0 ../paxos.conf
+	./sample/acceptor 1 ../paxos.conf
+	./sample/acceptor 2 ../paxos.conf
+	./sample/proposer 0 ../paxos.conf
 	./sample/learner ../paxos.conf > learner.txt &
-	./sample/client 127.0.0.1:5550 1
+	./sample/client -p 0 -v 32 -o 16
 
 ## Configuration
 
