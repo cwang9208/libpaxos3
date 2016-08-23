@@ -78,7 +78,7 @@ Usage: ./sample/learner [path/to/paxos.conf]
 	./sample/acceptor 2 ../paxos.conf
 	./sample/proposer 0 ../paxos.conf
 	./sample/learner ../paxos.conf > learner.txt &
-	./sample/client -p 0 -v 32 -o 16
+	./sample/client -p 0 -v 64 -o 8
 
 ## Configuration
 
