@@ -57,6 +57,18 @@ Usage: ./sample/client [path/to/paxos.conf] [-h] [-o] [-v] [-p]
   -p, --proposer-id #           d of the proposer to connect to
 ```
 
+```
+Usage: ./sample/acceptor id [path/to/paxos.conf]
+```
+
+```
+Usage: ./sample/proposer id [path/to/paxos.conf]
+```
+
+```
+Usage: ./sample/learner [path/to/paxos.conf]
+```
+
 ## Running the examples
 
 	// specify acceptors and proposers separately
