@@ -40,12 +40,21 @@ You pass options to cmake as follows: ```cmake -DOPTION=VALUE```
 - ```LMDB_ROOT=PATH```  - point it to your installation of LMDB
 - ```LIBEVENT_ROOT=PATH``` -  point it to your installation of Libevent
 - ```MSGPACK_ROOT=PATH``` - point it to your installation of MessagePack
-## Build
+
+## Usage
 
 ```
 Usage: ./sample/replica id [path/to/paxos.conf] [-h] [-s]
   -h, --help                    Output this message and exit
   -v, --verbose                 Print delivered messages
+```
+
+```
+Usage: ./sample/client [path/to/paxos.conf] [-h] [-o] [-v] [-p]
+  -h, --help                    Output this message and exit
+  -o, --outstanding #           Number of outstanding client values
+  -v, --value-size #            Size of client value (in bytes)
+  -p, --proposer-id #           d of the proposer to connect to
 ```
 
 ## Running the examples
